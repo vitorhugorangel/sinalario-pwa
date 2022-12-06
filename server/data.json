@@ -1,0 +1,24 @@
+{
+  "movies": [
+    {
+      "id": "animais",
+      "source": "/movies/animais-libras.mp4",
+      "thumb": "/images/thumbs/animais-capa.jpg"
+    },
+    {
+      "id": "cores",
+      "source": "/movies/cores-libras.mp4",
+      "thumb": "images/thumbs/cores-capa.jpg"
+    },
+    {
+      "id": "corpo",
+      "source": "/movies/corpo-humano-libras.mp4",
+      "thumb": "images/thumbs/corpo-humano-capa.jpg"
+    },
+    {
+      "id": "frutas",
+      "source": "/movies/frutas-libras.mp4",
+      "thumb": "/images/thumbs/frutas-capa.jpg"
+    }
+  ]
+}
