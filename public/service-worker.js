@@ -12,6 +12,9 @@ async function montarCache() {
   return cache.addAll(resources);
 }
 
+self.addEventListener('fetch', () =>{})
+self.addEventListener('load', () =>{})
+
 self.addEventListener('install', (event) => {
   event.waitUntil(montarCache());
   event.waitUntil(caches.open('movies'));

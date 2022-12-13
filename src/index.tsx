@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 import { appConfig } from './config/app';
+import { badgindControls } from './services/badging-api-utils';
+import { notificarUsuario } from './services/notification-api';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -27,3 +29,13 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
+badgindControls.start();
+
+const eventSource = new EventSource('http://localhost:3002');
+
+eventSource.onmessage = (event) => {
+  notificarUsuario(event.data);
+  badgindControls.increaseBadgeCount();
+};
+
+eventSource.addEventListener('open', () => console.log('abriu'));
